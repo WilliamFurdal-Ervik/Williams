@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do App</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <h1>To Do App</h1>
+        <!-- Form to add new tasks -->
+        <div>
+            <h2>Add tasks</h2>
+            <input type="text" id="task-input" placeholder="Add a new task">
+            <textarea id="notes-input" placeholder="Add notes"></textarea> 
+            <select id="difficulty-select">
+                <option value="easy">Easy +1</option>
+                <option value="medium">Medium +3</option>
+                <option value="hard">Hard +5</option>
+            </select>
+            <input type="datetime-local" id="datetime-input">
+            <button class="addTask" onclick="addTask()">Add</button>
+        </div>
+
+        <!-- div meed date and time -->
+        <div class="task-section" id="tasks-with-datetime">
+            <h2>Tasks with Date and Time</h2>
+            <ul id="todo-list-with-datetime"></ul>
+        </div>
+
+        <!-- div uten date and time -->
+        <div class="task-section" id="tasks-without-datetime">
+            <h2>Tasks without Date and Time</h2>
+            <ul id="todo-list-without-datetime"></ul>
+        </div>
+
+        <!-- finished tasks -->
+        <div class="task-section" id="finished-tasks">
+            <h2>Finished Tasks</h2>
+            <ul id="todo-list-finished"></ul>
+        </div>
+    </div>
+
+    <!-- Point counter -->
+    <div class="point-counter" id="point-counter">Points: 0</div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
